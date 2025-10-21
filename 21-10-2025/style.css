@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+SAS:wght@100..400&display=swap');
+
+
+body {
+    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+    /* font-family: "Playwrite DE SAS", cursive; */
+}
+
+
+.para {
+
+    font-size: 40px;
+    /* font-size: 100%; */
+    /* font-size: 1rem; */
+    /* font-weight:  bold; */
+    /* font-style: italic; */
+    /* font-style: normal; */
+    /* @font-face {
+        font-family: 'ChunkFiveRegular';
+        src: url('fonts/chunkfive.eot');
+    }
+
+    h1,
+    h2 {
+        font-family: ChunkFiveRegular, Georgia, serif;
+    } */
+    /* text-transform: capitalize; */
+    /* text-transform: lowercase; */
+    /* text-transform: uppercase; */
+    /* text-decoration: dotted; */
+    /* text-decoration: overline; */
+    /* text-decoration: wavy; */
+    line-height: 52px;
+    letter-spacing: 3px;
+    word-spacing: 4px;
+    /* text-align:center; */
+    text-align: center;
+    text-shadow: 5px 10px 5px red;
+}
+
+.para::first-letter {}
+
+.para::first-line {
+    font-size: 100px;
+    color: green;
+}
+
+.image:visited {
+    color: green;
+}
+
+.image:link {
+    color: green;
+}

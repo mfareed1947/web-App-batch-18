@@ -1,0 +1,13 @@
+ol {
+  /* list-style-type: square; */
+  /* list-style-image: url("./cloudy-cloud-rain.png"); */
+  list-style-position: inside;
+  /* list-style: none; */
+  /* display: flex; */
+}
+
+ol li {
+  /* display: inline; */
+  /* cursor: pointer; */
+  /* cursor: ; */
+}

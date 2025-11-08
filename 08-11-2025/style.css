@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #ffd11a;
+  --secondary-color: #262626;
+  --heading-one-padding: 40px;
+  --font: "Kumbh Sans", sans-serif;
+  --border-btn-color: #1a1a1a;
+  --text-color: #98989a;
+}
+
+.container {
+  height: 100vh;
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.heading-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px 20px;
+}
+
+.heading {
+  font-family: var(--font);
+  color: white;
+}
+
+.btn {
+  border: 1px solid var(--text-color);
+  background-color: transparent;
+  color: var(--text-color);
+  padding: 18px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+}
+
+.btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.content {
+  display: flex;
+  gap: 20px;
+}
+.content-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.content-data p {
+  color: white;
+  font-family: var(--font);
+}
+.content-data span {
+  /* margin-top: 10px; */
+  color: var(--text-color);
+  font-family: var(--font);
+}
+
+.content-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-btn {
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.like-btn {
+  padding: 10px;
+  border: 1px solid var(--text-color);
+  color: white;
+  border-radius: 15px;
+  font-family: var(--font);
+}
+
+.share-btn {
+  padding: 10px;
+  border: 1px solid var(--text-color);
+  color: white;
+  border-radius: 15px;
+  font-family: var(--font);
+}
+
+.read-more-btn {
+  border: 1px solid var(--text-color);
+  background-color: transparent;
+  color: var(--text-color);
+  /* padding: 5px 10px; */
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.read-more-btn:hover {
+  background-color: var(--primary-color);
+  color: black;
+}
+
+.read-more-btn img {
+  width: 20px;
+  height: 20px;
+}

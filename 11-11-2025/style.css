@@ -1,0 +1,42 @@
+.container {
+    height: 100vh;
+    background-color: chocolate;
+    /* width: 80%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column-reverse; */
+    /* flex-wrap: wrap; */
+    gap: 10px;
+
+}
+
+/* .parent {
+    display: flex;
+    justify-content: space-around;
+    
+} */
+
+.child {
+    height: 200px;
+    width: 200px;
+    /* flex: 1 100px; */
+    background: #1db646;
+    text-align: center;
+    font-size: 23px;
+    transition: ease-in-out 2s;
+}
+
+.child:hover {
+    width: 400px;
+    height: 400px;
+}
+
+/* .childs {
+    height: 200px;
+    width: 200px;
+    flex: 1 150px;
+    background: #1db646;
+    text-align: center;
+    font-size: 23px;
+} */

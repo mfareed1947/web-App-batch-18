@@ -1,0 +1,48 @@
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: blueviolet;
+  width: 300px;
+  height: 300px;
+  filter: blur(5px);
+  /* backdrop-filter: blur(); */
+  /* transition: ease-in-out 1s; */
+  /* animation: move; */
+  animation: 3s linear 1s infinite both running slide-in;
+}
+
+@keyframes slide-in {
+  0% {
+    background-color: red;
+    transform: translateX(0%);
+  }
+  50% {
+    /* background-color: yellow; */
+    /* width: 400px; */
+    transform: translateX(50%);
+  }
+  100% {
+    /* background-color: rgb(0, 174, 255); */
+    /* width: 700px; */
+    transform: translateX(100%);
+  }
+}
+
+.container:hover {
+  /* transform: scale(1.2); */
+  /* transform: rotate(360deg); */
+  /* transform: rotate3d(1, 2, 3, 10deg); */
+  /* transform: translate(300px, 50%); */
+  /* transform: translate3d(300px, 50%); */
+  /* transform: skewX(30deg); */
+  /* transform: rotateX(10deg); */
+  /* transform: rotateY(180deg); */
+  /* transform: rotateZ(10deg); */
+
+  /* transform: matrix(1, 1, 3, 4, 5, 4); */
+}

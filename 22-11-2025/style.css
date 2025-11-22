@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --border-input-color: #d9d9d9;
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.image-container {
+  /* position: relative; */
+}
+
+.image-container img {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  /* object-fit: contain; */
+  object-position: center;
+}
+
+/* Content section */
+
+.content-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.heading-2 {
+}
+
+.form-content {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container input {
+  width: 400px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid var(--border-input-color);
+  padding: 7px 10px;
+}
+.input-container input::placeholder {
+  color: var(--border-input-color);
+}
+.term-container {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  margin: 15px 0px;
+}
+
+.term-container span {
+  font-size: 12px;
+}
+
+.signup-btn {
+  padding: 10px;
+  border: none;
+  background: #3a5b22;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.break-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.line {
+  background-color: var(--border-input-color);
+  width: 100%;
+  height: 1px;
+}
+.socail-login {
+  display: flex;
+  justify-content: center;
+}
+.socail-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 16px;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid var(--border-input-color);
+  cursor: pointer;
+}
+
+.sign-in-method {
+  text-align: center;
+  margin-top: 15px;
+}

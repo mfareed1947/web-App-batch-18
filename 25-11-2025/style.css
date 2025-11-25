@@ -1,0 +1,36 @@
+/*  0 - 600 */
+
+@media screen and (min-width:600px) {
+    .container {
+        background-color: red;
+        height: 100vh;
+    }
+}
+
+/* @media screen and (min-width: 600px) {
+    .container {
+        background-color: blue;
+    }
+} */
+
+/*  0 - 900 */
+
+@media screen and (min-width: 900px) {
+    .container {
+        background-color: rgb(38, 255, 0);
+        height: 100vh;
+    }
+}
+
+
+/* @media screen and (min-width:980px) {
+    .container {
+        background-color: green;
+    }
+}
+
+@media screen and (min-width:1300px) {
+    .container {
+        background-color: yellow;
+    }
+} */

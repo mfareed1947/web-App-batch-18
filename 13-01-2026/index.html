@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Mastery</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="app.js" defer></script>
+    <style>
+        :root{
+            --primary: oklch(65% 0.2 260);
+            --accent: oklch(75% 0.15 320);
+            --glass-bg: rgba(255,255,255,0.05);
+            --muted: rgba(255,255,255,0.06);
+        }
+
+        *{box-sizing:border-box}
+        html,body{height:100%}
+        body{
+            margin:0;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+            color: white;
+            background: radial-gradient(at 10% 10%, oklch(20% 0.05 260) 0px, transparent 40%),
+                                    radial-gradient(at 100% 0%, oklch(30% 0.1 320) 0px, transparent 40%),
+                                    oklch(15% 0.02 250);
+            padding:2rem;
+        }
+
+        .glass-container{
+            width:100%;
+            max-width:520px;
+            background: var(--glass-bg);
+            border-radius:20px;
+            padding:2rem;
+            border:1px solid rgba(255,255,255,0.08);
+            backdrop-filter: blur(12px) saturate(120%);
+            box-shadow: 0 30px 60px -20px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+        }
+
+        h1{margin:0 0 1rem 0;font-size:1.6rem}
+
+        .input-group{display:flex;gap:0.5rem}
+        .input-group input{
+            flex:1;
+            padding:0.75rem 1rem;
+            border-radius:12px;
+            border:1px solid var(--muted);
+            background: rgba(255,255,255,0.02);
+            color:inherit;
+            font-size:1rem;
+            outline:none;
+        }
+        .input-group input::placeholder{color:rgba(255,255,255,0.5)}
+        .input-group button{
+            padding:0.75rem 1rem;
+            border-radius:12px;
+            border:0;
+            background: linear-gradient(135deg, var(--accent), var(--primary));
+            color:white;
+            font-weight:700;
+            cursor:pointer;
+        }
+
+        #tableWrapper{display:none}
+
+        table{width:100%;border-collapse:separate;border-spacing:0 8px;margin-top:1rem}
+        tbody tr{opacity:0;transform:translateY(10px);animation:fadeIn 0.36s ease forwards;animation-delay:calc(var(--i) * 0.05s)}
+        @keyframes fadeIn{to{opacity:1;transform:translateY(0)}}
+
+        td{padding:12px;background:rgba(255,255,255,0.03);text-align:center;font-size:1.05rem}
+        td:first-child{border-radius:8px 0 0 8px;font-weight:700;color:var(--accent)}
+        td:last-child{border-radius:0 8px 8px 0;font-weight:800;color:var(--primary)}
+
+        .hint{margin-top:0.75rem;font-size:0.85rem;color:rgba(255,255,255,0.65)}
+    </style>
+</head>
+<body>
+    <h1>
+        Hello, World!
+    </h1>
+    <!-- <div class="glass-container" role="main">
+        <h1>Math Mastery</h1>
+
+        <div class="input-group" aria-label="Multiplication inputs">
+            <input type="number" id="tableNum" placeholder="Table of..." min="0" />
+            <input type="number" id="tableLimit" placeholder="Up to..." min="1" />
+            <button id="generateBtn" type="button">Generate</button>
+        </div>
+
+        <div class="hint">Use the inputs above and press <strong>Generate</strong>.</div>
+
+        <div id="tableWrapper">
+            <table id="mathTable" aria-hidden="true">
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+    </div> -->
+</body>
+</html>

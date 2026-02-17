@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17-02-2026</title>
+    <script src="app.js" defer></script>
+</head>
+
+
+<style>
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+    }
+
+
+    #todo_container {
+        width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    #todo_input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    #add_todo_btn {
+        width: 100%;
+        padding: 10px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #add_todo_btn:hover {
+        background-color: #218838;
+    }
+
+    .todo_item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+        gap: 20px;
+        background-color: #7d8995;
+        margin-top: 10px;
+        border-radius: 20px;
+        font-size: larger;
+        font-weight: 900;
+    }
+
+    .todo_item p {
+        margin: 0;
+    }
+
+    .todo_item button {
+        margin-left: 5px;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .todo_item button:hover {
+        opacity: 0.8;
+    }
+
+
+    #delete_todo_btn {
+        background-color: #dc3545;
+        color: white;
+    }
+
+    #edit_todo_btn {
+        background-color: #007bff;
+        color: white;
+    }
+
+
+</style>
+
+<body>
+    <!-- <h1>Hello World !</h1> -->
+
+<div id="todo_container">
+    <h1>Todo List</h1>
+
+    <input type="text" id="todo_input" placeholder="Enter a new todo">
+
+
+    <button onclick="addTodo()" id="add_todo_btn">Add Todo</button>
+
+
+    <div id="todo_list">
+        <div class="todo_item">
+            <p>Todo 1</p>
+
+            <button id="delete_todo_btn" onclick="deleteTodo(this)">Delete</button>
+            <button id="edit_todo_btn" onclick="editTodo(this)">Edit</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

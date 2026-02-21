@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21-02-2026</title>
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <!-- <h1>Hello World !</h1>
+
+    <div id="container">
+        <p>LoreLorem ipsum dolor 1</p>
+        <p>Lorem ipsum dolor 2</p>
+        <p>Lorem ipsum dolor 3</p>
+    </div> -->
+
+    <!-- // ================ TODO APPLICATION =================== -->
+
+    <h1 id="heading">Todo Application</h1>
+
+    <div id="todo-container">
+        <div class="todo-input-container">
+            <input type="text" placeholder="Enter your todo here" id="todo-input">
+        <button onclick="addTodo()" id="add-todo-btn">Add Todo</button>
+        </div>
+
+        <div id="todo-list">
+
+            <!-- <div class="todo-item">
+                <p class="todo-text">Todo 1</p>
+
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+            </div> -->
+          
+           
+
+        </div>
+
+    </div>
+
+    <style>
+        /* Professional color palette */
+        :root {
+            --primary: #2D3748;
+            --secondary: #4FD1C5;
+            --accent: #F6AD55;
+            --background: #F7FAFC;
+            --white: #FFFFFF;
+            --danger: #E53E3E;
+            --shadow: rgba(45, 55, 72, 0.08);
+        }
+
+        /* Body styling */
+        body {
+            background: var(--background);
+            font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Heading */
+        #heading {
+            text-align: center;
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-top: 2rem;
+            letter-spacing: 2px;
+            font-weight: 700;
+            animation: fadeInDown 1s;
+        }
+
+        /* Container */
+        #todo-container {
+            background: var(--white);
+            max-width: 520px;
+            margin: 2rem auto;
+            padding: 2rem 2rem 1rem 2rem;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px var(--shadow);
+            animation: fadeInUp 1s;
+        }
+
+        /* Input and button */
+        #todo-input {
+            width: 70%;
+            padding: 0.75rem;
+            border: 1px solid var(--secondary);
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+            margin-right: 0.5rem;
+            background: var(--background);
+        }
+
+        #todo-input:focus {
+            border-color: var(--accent);
+        }
+
+        #add-todo-btn {
+            padding: 0.75rem 1.5rem;
+            background: var(--secondary);
+            color: var(--primary);
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            box-shadow: 0 2px 8px var(--shadow);
+        }
+
+        #add-todo-btn:hover {
+            background: var(--accent);
+            color: var(--primary);
+            transform: translateY(-2px) scale(1.04);
+        }
+
+        .todo-input-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Todo List */
+        #todo-list {
+            margin-top: 2rem;
+        }
+
+        /* Todo Item */
+        .todo-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--background);
+            border-radius: 10px;
+            box-shadow: 0 2px 8px var(--shadow);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            animation: fadeIn 0.7s;
+            transition: box-shadow 0.3s;
+        }
+
+        .todo-item:hover {
+            box-shadow: 0 4px 16px var(--shadow);
+        }
+
+        /* Todo Text */
+        .todo-text {
+            flex: 1;
+            color: var(--primary);
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin: 0;
+            padding-right: 1rem;
+            letter-spacing: 1px;
+        }
+
+        /* Buttons */
+        .edit-btn,
+        .delete-btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            margin-left: 0.5rem;
+            transition: background 0.3s, color 0.3s, transform 0.2s;
+        }
+
+        .edit-btn {
+            background: var(--accent);
+            color: var(--primary);
+        }
+
+        .edit-btn:hover {
+            background: var(--secondary);
+            color: var(--white);
+            transform: scale(1.05);
+        }
+
+        .delete-btn {
+            background: var(--danger);
+            color: var(--white);
+        }
+
+        .delete-btn:hover {
+            background: #C53030;
+            transform: scale(1.05);
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-40px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            #todo-container {
+                padding: 1rem;
+                max-width: 98vw;
+            }
+
+            #todo-input {
+                width: 100%;
+                margin-bottom: 0.5rem;
+            }
+
+            #add-todo-btn {
+                width: 100%;
+                margin-top: 0.5rem;
+            }
+
+            .todo-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .edit-btn,
+            .delete-btn {
+                margin-left: 0;
+                margin-top: 0.5rem;
+                width: 100%;
+            }
+        }
+    </style>
+
+</body>
+
+</html>

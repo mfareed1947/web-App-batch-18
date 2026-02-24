@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24-02-2026</title>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <h1 id="todo-title">My Todo List</h1>
+
+<div>
+    <input type="text" id="todo-input" placeholder="Add a new todo">
+
+<button onclick="addTodo()" id="add-todo-btn">Add Todo</button>
+</div>
+
+
+    <div id="todo-container">
+        <!-- <div id="todo-item">
+                <p class="todo-text">
+                    Todo 1
+                </p>
+
+            <button class="edit-btn" >Edit</button>
+            <button class="delete-btn">Delete</button>
+
+        </div> -->
+    </div>
+<style>
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #todo-title {
+        margin-top: 40px;
+        font-size: 2.5rem;
+        color: #333;
+        letter-spacing: 2px;
+        font-weight: 700;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        animation: fadeInDown 1s;
+    }
+
+    #todo-input {
+        padding: 12px 16px;
+        border-radius: 8px;
+        border: 1px solid #d1d5db;
+        font-size: 1rem;
+        width: 260px;
+        margin-top: 24px;
+        margin-right: 8px;
+        transition: border-color 0.3s;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    #todo-input:focus {
+        border-color: #4f8cff;
+        outline: none;
+    }
+
+    #add-todo-btn {
+        padding: 12px 24px;
+        border-radius: 8px;
+        border: none;
+        background: linear-gradient(90deg, #4f8cff 0%, #38b2ac 100%);
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        transition: background 0.3s, transform 0.2s;
+        margin-bottom: 24px;
+        animation: fadeInUp 1s;
+    }
+    #add-todo-btn:hover {
+        background: linear-gradient(90deg, #38b2ac 0%, #4f8cff 100%);
+        transform: translateY(-2px) scale(1.03);
+    }
+
+    #todo-container {
+        width: 340px;
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 8px 32px rgba(76, 110, 245, 0.08), 0 1.5px 3px rgba(0,0,0,0.03);
+        padding: 24px 16px;
+        margin-top: 16px;
+        animation: fadeIn 1.2s;
+    }
+
+    #todo-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: linear-gradient(90deg, #e3e9f7 0%, #f7fafc 100%);
+        border-radius: 10px;
+        padding: 14px 12px;
+        margin-bottom: 12px;
+        box-shadow: 0 2px 8px rgba(76, 110, 245, 0.04);
+        animation: slideIn 0.7s;
+        transition: box-shadow 0.3s;
+    }
+    #todo-item:hover {
+        box-shadow: 0 4px 16px rgba(76, 110, 245, 0.12);
+    }
+
+    .todo-text {
+        font-size: 1.1rem;
+        color: #222;
+        font-weight: 500;
+        margin: 0;
+        flex: 1;
+        padding-right: 16px;
+        letter-spacing: 0.5px;
+        animation: fadeInLeft 0.7s;
+    }
+
+    .edit-btn, .delete-btn {
+        padding: 8px 16px;
+        border-radius: 8px;
+        border: none;
+        font-size: 0.95rem;
+        font-weight: 500;
+        cursor: pointer;
+        margin-left: 8px;
+        transition: background 0.3s, color 0.3s, transform 0.2s;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+
+    .edit-btn {
+        background: #f7fafc;
+        color: #4f8cff;
+        border: 1px solid #4f8cff;
+    }
+    .edit-btn:hover {
+        background: #4f8cff;
+        color: #fff;
+        transform: scale(1.05);
+    }
+
+    .delete-btn {
+        background: #fff;
+        color: #e53e3e;
+        border: 1px solid #e53e3e;
+    }
+    .delete-btn:hover {
+        background: #e53e3e;
+        color: #fff;
+        transform: scale(1.05);
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+        0% { opacity: 0; transform: translateY(-40px);}
+        100% { opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeInUp {
+        0% { opacity: 0; transform: translateY(40px);}
+        100% { opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeIn {
+        0% { opacity: 0;}
+        100% { opacity: 1;}
+    }
+    @keyframes slideIn {
+        0% { opacity: 0; transform: translateX(-40px);}
+        100% { opacity: 1; transform: translateX(0);}
+    }
+    @keyframes fadeInLeft {
+        0% { opacity: 0; transform: translateX(-20px);}
+        100% { opacity: 1; transform: translateX(0);}
+    }
+</style>
+</body>
+</html>

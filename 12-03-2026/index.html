@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12-03-2026</title>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div id="container">
+        <input  id="name" type="text" placeholder="Enter your name">
+        <input id="age" type="text" placeholder="Enter your Age">
+        <input id="city" type="text" placeholder="Enter your City">
+        <button onclick="addPerson()" >Add Person</button>
+
+
+        <div id="people-list">
+            <div class="single-people">
+                <h3>Name: John Doe</p>
+                <p>Age: 30</p>
+                <p>City: New York</p>
+            </div>
+    
+         
+        </div>
+    </div>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    #container {
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        padding: 40px;
+        max-width: 500px;
+        width: 100%;
+        animation: slideUp 0.6s ease-out;
+    }
+
+    @keyframes slideUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    input {
+        width: 100%;
+        padding: 12px 15px;
+        margin-bottom: 12px;
+        border: 2px solid #e0e0e0;
+        border-radius: 10px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+
+    input:focus {
+        outline: none;
+        border-color: #667eea;
+        box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-bottom: 30px;
+    }
+
+    button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+    }
+
+    #people-list {
+        max-height: 400px;
+        overflow-y: auto;
+    }
+
+    .single-people {
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 15px;
+        animation: fadeIn 0.5s ease;
+        border-left: 4px solid #667eea;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateX(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .single-people h3 {
+        color: #333;
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .single-people p {
+        color: #666;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+</style>
+</body>
+</html>
